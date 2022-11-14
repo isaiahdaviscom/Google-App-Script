@@ -6,8 +6,7 @@ on:
   pull_request:
     branches: [main]
 jobs:
-  environment:
-    name: production
+  environment: production
   deploy-apps-Script:
     runs-on: ubuntu-latest
     steps:
