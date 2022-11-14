@@ -7,7 +7,7 @@ on:
     branches: [main]
 jobs:
   environment:
-    name: production_environment
+    name: production
   deploy-apps-Script:
     runs-on: ubuntu-latest
     steps:
