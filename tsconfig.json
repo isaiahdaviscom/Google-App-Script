@@ -1,0 +1,12 @@
+{
+  "include": ["."],
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    "allowJs": false,
+    "noEmit": true,
+    "lib": [
+      "esnext"
+    ],
+    "experimentalDecorators": true
+  }
+}

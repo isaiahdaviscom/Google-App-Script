@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"name": "_workspace",
+			"path": "."
+		},
+		{
+			"name": "Google App Scripts",
+			"path": ".."
+		}
+	],
+	"settings": {
+		"terminal.integrated.defaultProfile.windows": "Command Prompt",
+		"files.exclude": {
+			"**/node_modules": true,
+			"**/.vscode": true
+		}
+	}
+}
