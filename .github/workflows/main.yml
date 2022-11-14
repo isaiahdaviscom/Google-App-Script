@@ -2,10 +2,12 @@ name: Apps Script CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 jobs:
+  environment:
+    name: production_environment
   deploy-apps-Script:
     runs-on: ubuntu-latest
     steps:
@@ -17,4 +19,4 @@ jobs:
           clientId: ${{ secrets.CLIENT_ID }}
           clientSecret: ${{ secrets.CLIENT_SECRET }}
           scriptId: ${{ secrets.SCRIPT_ID }}
-          command: 'push'
+          command: "push"
