@@ -8,19 +8,15 @@ function getSpreadsheetsAll(): GoogleAppsScript.Spreadsheet.Sheet[] {
   return SpreadsheetApp.getActiveSpreadsheet().getSheets();
 }
 
-function getSheetsFromFile(fileIterator) {
-  let filesArray = [];
-  let fileObject = {};
-  let fileIndex = 0;
-
-  while (fileIterator.hasNext()) {
+function getSheetsFromFile( fileIterator: { hasNext: () => any; next: () => any; } ) {
+  while ( fileIterator.hasNext() ) {
     let file = fileIterator.next();
-    Logger.log(file.getName());
+    Logger.log( file.getName() );
   }
 }
 
-function getScriptAppByName(id): string {
-  return DriveApp.getFileById(id).getName();
+function getScriptAppByName( id ): string {
+  return DriveApp.getFileById( id ).getName();
 }
 
 function getScriptAppId(): string {
@@ -29,22 +25,22 @@ function getScriptAppId(): string {
 
 function initialize(): void {
   const calendars = getAllCalendars();
-  const calendarsSheet = SpreadsheetApp.openByUrl(calendarSheetURL);
+  const calendarsSheet = SpreadsheetApp.openByUrl( calendarSheetURL );
   const endDate = new Date();
   const startDate = new Date();
 
   function setToLastYear() {
-    startDate.setFullYear(endDate.getFullYear() - 1);
+    startDate.setFullYear( endDate.getFullYear() - 1 );
   }
 
   function getCalendarEvents() {
     setToLastYear();
-    for (let x = 0; x < calendars.length; x++) {
-      calendars[x].getEvents(startDate, endDate)
+    for ( let x = 0; x < calendars.length; x++ ) {
+      Logger.log( calendars[x].getEvents( startDate, endDate ) );
     }
   }
 
   // initialize
   getCalendarEvents();
-  Logger.log(calendarsSheet.getSheets())
+  Logger.log({...calendarsSheet.getSheets()});
 }

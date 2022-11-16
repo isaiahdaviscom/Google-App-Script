@@ -14,6 +14,12 @@
 		"files.exclude": {
 			"**/node_modules": true,
 			"**/.vscode": true
-		}
+		},
+		"javascript.format.semicolons": "insert",
+		"typescript.format.semicolons": "insert",
+		"files.trimFinalNewlines": true,
+		"typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": true,
+		"typescript.format.insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces": true,
+		"typescript.inlayHints.enumMemberValues.enabled": false
 	}
 }
