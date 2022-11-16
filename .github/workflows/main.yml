@@ -8,8 +8,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Echo Secrets
-        run: echo "The accessToken key is:${{secrets.ACCESS_TOKEN}}"
       - name: Clasp Actions
         uses: daikikatsuragawa/clasp-action@v1.0.1
         with:
@@ -19,5 +17,5 @@ jobs:
           clientId: ${{ secrets.CLIENT_ID }}
           clientSecret: ${{ secrets.CLIENT_SECRET }}
           scriptId: ${{ secrets.SCRIPT_ID }}
-          rootDir: ${{ secrets.ROOTDIR }}
+          rootDir: '/'
           command: "push"
