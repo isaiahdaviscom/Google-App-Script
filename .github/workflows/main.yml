@@ -6,9 +6,16 @@ on:
   pull_request:
     branches: [main]
 jobs:
-  deploy-apps-Script:
+  deploy:
     runs-on: ubuntu-latest
     steps:
+      run: echo "The accessToken key is:${{secrets.ACCESS_TOKEN}}"
+      run: echo "The idToken key is:${{secrets.ID_TOKEN}}"
+      run: echo "The refreshToken key is:${{secrets.REFRESH_TOKEN}}"
+      run: echo "The clientId key is:${{secrets.CLIENT_ID}}"
+      run: echo "The clientSecret key is:${{secrets.CLIENT_SECRET}}"
+      run: echo "The scriptId key is:${{secrets.SCRIPT_ID}}"
+      run: echo "The rootDir key is:${{secrets.ROOTDIR}}"
       - uses: daikikatsuragawa/clasp-action@v1.0.1
         with:
           accessToken: ${{ secrets.ACCESS_TOKEN }}
