@@ -1,5 +1,23 @@
 {
   "dependencies": {
     "@types/google-apps-script": "^1.0.56"
-  }
+  },
+  "name": "google-app-script",
+  "description": "A cloud-based JavaScript platform that lets you integrate with and automate tasks across Google products.",
+  "version": "1.0.0",
+  "main": "webpack.config.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isaiahdaviscom/Google-App-Script.git"
+  },
+  "author": "Isaiah Davis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/isaiahdaviscom/Google-App-Script/issues"
+  },
+  "homepage": "https://github.com/isaiahdaviscom/Google-App-Script#readme"
 }
